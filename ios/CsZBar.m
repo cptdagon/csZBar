@@ -21,6 +21,8 @@
 
 #pragma mark - Cordova Plugin
 
+NSMutableArray *resArray = [[NSMutableArray alloc] init];
+
 - (void)pluginInitialize {
     self.scanInProgress = NO;
 }
@@ -93,8 +95,13 @@
         toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 44.0);
         toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
         UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
+		UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" target:self action:@selector(imagePickerControllerEnd)]; //put the dismissal procedure method where dismiss view controller is
+		//doneButton.title = @"Done"; 
+		//[doneButton setTarget:self]; 
+		//[doneButton setAction:@selector(dismissViewController)]; //put the dismissal procedure method where dismiss view controller is
+		//self.navigationItem.rightBarButtonItem = doneButton; 
         
-        NSArray *buttons = [NSArray arrayWithObjects: buttonFlash, nil];
+        NSArray *buttons = [NSArray arrayWithObjects: buttonFlash,doneButton, nil];
         [toolbarViewFlash setItems:buttons animated:NO];
         [self.scanReader.view addSubview:toolbarViewFlash];
 
@@ -151,12 +158,28 @@
     
     ZBarSymbol *symbol = nil;
     for (symbol in results) break; // get the first result
+	
+    //[self.scanReader dismissViewControllerAnimated: YES completion: ^(void) {
+    //    self.scanInProgress = NO;
+    //    [self sendScanResult: [CDVPluginResult
+    //                           resultWithStatus: CDVCommandStatus_OK
+    //                           messageAsString: symbol.data]];
+    //}];
+	[resArray addObject:[symbol.data]];
+	return;
+	
+}
 
-    [self.scanReader dismissViewControllerAnimated: YES completion: ^(void) {
+- (void) imagePickerControllerEnd {
+	//NSArray *myArray;
+	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:resArray options:NSJSONWritingPrettyPrinted error:&error];
+	NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+	
+	[self.scanReader dismissViewControllerAnimated: YES completion: ^(void) {
         self.scanInProgress = NO;
         [self sendScanResult: [CDVPluginResult
                                resultWithStatus: CDVCommandStatus_OK
-                               messageAsString: symbol.data]];
+                               messageAsString: jsonString]];
     }];
 }
 
