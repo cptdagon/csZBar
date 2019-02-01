@@ -60,6 +60,19 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+        
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:id="@+id/donebutton"
+            android:src="@drawable/camera_flash"
+            android:background="@color/csZbarScannerTextBackground"
+            android:onClick="toggleFlash"
+            android:longClickable="true"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 
