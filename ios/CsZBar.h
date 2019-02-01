@@ -7,6 +7,7 @@
 
 - (void)scan: (CDVInvokedUrlCommand*)command;
 - (void)toggleflash;
+- (void)imagePickerControllerEnd;
 
 
 
