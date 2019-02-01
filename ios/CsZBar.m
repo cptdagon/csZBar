@@ -95,13 +95,13 @@ NSMutableArray *resArray = [[NSMutableArray alloc] init];
         toolbarViewFlash.frame = CGRectMake(0.0, 0, (screenWidth > screenHeight ?screenWidth:screenHeight), 44.0);
         toolbarViewFlash.barStyle = UIBarStyleBlackOpaque;
         UIBarButtonItem *buttonFlash = [[UIBarButtonItem alloc] initWithTitle:@"Flash" style:UIBarButtonItemStyleDone target:self action:@selector(toggleflash)];
-		UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" target:self action:@selector(imagePickerControllerEnd)]; //put the dismissal procedure method where dismiss view controller is
+	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(imagePickerControllerEnd)]; //put the dismissal procedure method where dismiss view controller is
 		//doneButton.title = @"Done"; 
 		//[doneButton setTarget:self]; 
 		//[doneButton setAction:@selector(dismissViewController)]; //put the dismissal procedure method where dismiss view controller is
 		//self.navigationItem.rightBarButtonItem = doneButton; 
         
-        NSArray *buttons = [NSArray arrayWithObjects: buttonFlash,doneButton, nil];
+        NSArray *buttons = [NSArray arrayWithObjects: buttonFlash,doneButton];
         [toolbarViewFlash setItems:buttons animated:NO];
         [self.scanReader.view addSubview:toolbarViewFlash];
 
