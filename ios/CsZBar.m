@@ -110,7 +110,7 @@ NSMutableArray *resArray = [[NSMutableArray alloc] init];
             UIView *polygonView = [[UIView alloc] initWithFrame: CGRectMake  ( (screenWidth/2) - (dim/2), (screenHeight/2) - (dim/2), dim, dim)];
             
             UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0,dim / 2, dim, 1)];
-            lineView.backgroundColor = [UIColor redColor];
+            lineView.backgroundColor = [UIColor blueColor];
             [polygonView addSubview:lineView];
 
             self.scanReader.cameraOverlayView = polygonView;
