@@ -48,36 +48,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                
-                android:gravity="top"
+                android:layout_marginRight="10dp"      
+                android:layout_alignParentTop="true"
                 android:background="#ffff00" />
             
             <View android:id="@+id/csZbarScannerSight2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                
-                android:gravity="bottom"
+                android:layout_marginRight="10dp"   
+                android:layout_alignParentBottom="true"
                 android:background="#00ff00" />
 
-            <View android:id="@+id/csZbarScannerSight1"
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-               
-                android:gravity="left"
-                android:background="#ff00ff" />
-            
             <View android:id="@+id/csZbarScannerSight3"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-              
-                android:gravity="right"
+                android:layout_marginBottom="10dp"             
+                android:layout_alignParentLeft="true"
+                android:background="#ff00ff" />
+            
+            <View android:id="@+id/csZbarScannerSight4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"       
+                android:layout_alignParentRight="true"
                 android:background="#0000ff" />
             
         </RelativeLayout>
@@ -93,7 +89,7 @@
             android:visibility="visible"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="false" />
         
         <ImageButton
             android:layout_width="60dp"
@@ -106,7 +102,7 @@
             android:visibility="visible"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="false" />
 
     </RelativeLayout>
 
