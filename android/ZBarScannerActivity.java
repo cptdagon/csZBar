@@ -421,7 +421,15 @@ implements SurfaceHolder.Callback {
     };
 
     // Misc ------------------------------------------------------------
-
+    
+    // done button implementation here	
+    public void done (string msg)
+    {
+    	setResult(RESULT_CANCELLED);
+	finish();
+    }
+    // -------------------------------
+    
     // finish() due to error
     private void die (String msg)
     {
