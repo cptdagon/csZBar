@@ -118,7 +118,7 @@
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="70dp"
-            android:id="@+id/imageButton"
+            android:id="@+id/doneButton"
             android:src="@drawable/camera_flash"
             android:background="@color/csZbarScannerTextBackground"
             android:onClick="done"
