@@ -46,59 +46,59 @@
 
             <View android:id="@+id/csZbarScannerSight"
                 android:layout_width="100dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:background="#ffff00" />
+                android:background="#000000" />
             
             <View android:id="@+id/csZbarScannerSightTopRight"
                 android:layout_width="100dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_alignParentRight="true"     
                 android:layout_alignParentTop="true"
-                android:background="#ffff00" />
+                android:background="#000000" />
             
             <View android:id="@+id/csZbarScannerSightBottomLeft"
                 android:layout_width="100dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_alignParentBottom="true"      
                 android:layout_alignParentLeft="true"
-                android:background="#00ff00" />
+                android:background="#000000" />
             
             <View android:id="@+id/csZbarScannerSightBottomRight"
                 android:layout_width="100dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_alignParentRight="true"    
                 android:layout_alignParentBottom="true"
-                android:background="#00ff00" />
+                android:background="#000000" />
 
             <View android:id="@+id/csZbarScannerSightLeftTop"
-                android:layout_width="1dp"
+                android:layout_width="2dp"
                 android:layout_height="100dp"
                 android:layout_alignParentTop="true"      
                 android:layout_alignParentLeft="true"
-                android:background="#ff00ff" />
+                android:background="#000000" />
             
              <View android:id="@+id/csZbarScannerSightLeftBottom"
-                android:layout_width="1dp"
+                android:layout_width="2dp"
                 android:layout_height="100dp"
                 android:layout_alignParentBottom="true"      
                 android:layout_alignParentLeft="true"
-                android:background="#ff00ff" />
+                android:background="#000000" />
             
             <View android:id="@+id/csZbarScannerSightRightBottom"
-                android:layout_width="1dp"
+                android:layout_width="2dp"
                 android:layout_height="100dp"
                 android:layout_alignParentBottom="true"      
                 android:layout_alignParentRight="true"
-                android:background="#0000ff" />
+                android:background="#000000" />
             
             <View android:id="@+id/csZbarScannerSightRightTop"
-                android:layout_width="1dp"
+                android:layout_width="2dp"
                 android:layout_height="100dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:background="#0000ff" />
+                android:background="#000000" />
             
         </RelativeLayout>
 
@@ -115,7 +115,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="false" />
         
-        <Button
+        <ImageButton
             android:layout_width="60dp"
             android:layout_height="70dp"
             android:id="@+id/imageButton"
