@@ -118,9 +118,8 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="70dp"
-            android:id="@+id/doneButton"
-            android:text="Done"
-            android:textColor="#ff0000"
+            android:id="@+id/imageButton"
+            android:src="@drawable/camera_flash"
             android:background="@color/csZbarScannerTextBackground"
             android:onClick="done"
             android:longClickable="false"
