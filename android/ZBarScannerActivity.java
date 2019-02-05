@@ -433,8 +433,7 @@ implements SurfaceHolder.Callback {
     // done button implementation here	
     public void done (String msg)
     {
-    	setResult(RESULT_CANCELED);
-	finish();
+
     }
     // -------------------------------
     
