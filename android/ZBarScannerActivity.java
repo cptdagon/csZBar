@@ -391,7 +391,9 @@ implements SurfaceHolder.Callback {
     };
 
     // Camera callbacks ------------------------------------------------
-
+    
+    List<String> qrArray = new List<String>();
+    
     // Receives frames from the camera and checks for barcodes.
     private PreviewCallback previewCb = new PreviewCallback()
     {
@@ -408,12 +410,13 @@ implements SurfaceHolder.Callback {
                 SymbolSet syms = scanner.getResults();
                 for (Symbol sym : syms) {
                     qrValue = sym.getData();
-
+		    // Store Value in Array for multiple scans
+		    qrArray.Add(qrValue);
                     // Return 1st found QR code value to the calling Activity.
-                    Intent result = new Intent ();
-                    result.putExtra(EXTRA_QRVALUE, qrValue);
-                    setResult(Activity.RESULT_OK, result);
-                    finish();
+                    //Intent result = new Intent ();
+                    //result.putExtra(EXTRA_QRVALUE, qrValue);
+                    //setResult(Activity.RESULT_OK, result);
+                    //finish();
                 }
 
             }
@@ -425,8 +428,16 @@ implements SurfaceHolder.Callback {
     // done button implementation here	
     public void done (String msg)
     {
-    	setResult(RESULT_CANCELED);
-	finish();
+    	Intent result = new Intent ();
+	StringBuilder sb = new StringBuilder();
+	for (String s : list)
+	{
+  	    sb.append(s);
+    	    sb.append(",");
+	}
+        result.putExtra(EXTRA_QRVALUE, sb.toString());
+        setResult(Activity.RESULT_OK, result);
+        finish();
     }
     // -------------------------------
     
