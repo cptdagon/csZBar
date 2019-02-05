@@ -44,7 +44,7 @@
             android:layout_height="350dp"
             android:layout_centerInParent="true">
 
-            <View android:id="@+id/csZbarScannerSightTopLeft"
+            <View android:id="@+id/csZbarScannerSight"
                 android:layout_width="100dp"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
