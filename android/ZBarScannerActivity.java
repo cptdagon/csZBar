@@ -189,7 +189,15 @@ implements SurfaceHolder.Callback {
             findViewById(getResourceId("id/csZbarScannerTitle")).bringToFront();
             findViewById(getResourceId("id/csZbarScannerInstructions")).bringToFront();
             findViewById(getResourceId("id/csZbarScannerSightContainer")).bringToFront();
-            findViewById(getResourceId("id/csZbarScannerSight")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightView")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSight")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightTopRight")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightBottomLeft")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightBottomRight")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightLeftTop")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightLeftBottom")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightRightTop")).bringToFront();
+	    findViewById(getResourceId("id/csZbarScannerSightRightLeft")).bringToFront();
             scannerView.requestLayout();
             scannerView.invalidate();
 
