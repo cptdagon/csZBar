@@ -400,7 +400,7 @@ implements SurfaceHolder.Callback {
 
     // Camera callbacks ------------------------------------------------
 	
-    List<String> qrArray = new ArrayList<String>();
+    private List<String> qrArray = new ArrayList<String>();
 	
     // Receives frames from the camera and checks for barcodes.
     private PreviewCallback previewCb = new PreviewCallback()
