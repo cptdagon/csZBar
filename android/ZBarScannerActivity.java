@@ -438,7 +438,7 @@ implements SurfaceHolder.Callback {
     {
 	Intent result = new Intent ();
 	StringBuilder sb = new StringBuilder();
-	for (String s : list)
+	for (String s : qrArray)
 	{
   	    sb.append(s);
     	    sb.append(",");
