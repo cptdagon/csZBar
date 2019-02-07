@@ -431,7 +431,7 @@ implements SurfaceHolder.Callback {
     // Misc ------------------------------------------------------------
     
     // done button implementation here	
-    public void done (String msg)
+    public void done (View view)
     {
 
     }
