@@ -119,7 +119,7 @@
             android:layout_width="60dp"
             android:layout_height="70dp"
             android:id="@+id/doneButton"
-            android:src="@drawable/camera_flash"
+            android:src="@drawable/camera_done"
             android:background="@color/csZbarScannerTextBackground"
             android:onClick="done"
             android:longClickable="false"
