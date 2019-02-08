@@ -1,7 +1,7 @@
 var argscheck = require('cordova/argscheck'),
     exec      = require('cordova/exec');
 
-function ZBar () {};
+function ZBar () {}
 
 ZBar.prototype = {
 
