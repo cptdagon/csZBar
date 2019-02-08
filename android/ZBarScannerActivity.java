@@ -190,14 +190,14 @@ implements SurfaceHolder.Callback {
             findViewById(getResourceId("id/csZbarScannerInstructions")).bringToFront();
             findViewById(getResourceId("id/csZbarScannerSightContainer")).bringToFront();
             findViewById(getResourceId("id/csZbarScannerSightView")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSight")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightTopRight")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightBottomLeft")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightBottomRight")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightLeftTop")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightLeftBottom")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightRightTop")).bringToFront();
-	    findViewById(getResourceId("id/csZbarScannerSightRightBottom")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSight")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightTopRight")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightBottomLeft")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightBottomRight")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightLeftTop")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightLeftBottom")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightRightTop")).bringToFront();
+            findViewById(getResourceId("id/csZbarScannerSightRightBottom")).bringToFront();
             scannerView.requestLayout();
             scannerView.invalidate();
 
@@ -418,8 +418,8 @@ implements SurfaceHolder.Callback {
                 SymbolSet syms = scanner.getResults();
                 for (Symbol sym : syms) {
                     qrValue = sym.getData();
-		    // Store Value in Array for multiple scans
-		    qrArray.Add(qrValue);
+		            // Store Value in Array for multiple scans
+		            qrArray.Add(qrValue);
                     // Return 1st found QR code value to the calling Activity.
                     //Intent result = new Intent ();
                     //result.putExtra(EXTRA_QRVALUE, qrValue);
@@ -436,13 +436,13 @@ implements SurfaceHolder.Callback {
     // done button implementation here	
     public void done (View view)
     {
-	Intent result = new Intent ();
-	StringBuilder sb = new StringBuilder();
-	for (String s : qrArray)
-	{
-  	    sb.append(s);
-    	    sb.append(",");
-	}
+        Intent result = new Intent ();
+        StringBuilder sb = new StringBuilder();
+        for (String s : qrArray)
+        {
+            sb.append(s);
+            sb.append(",");
+        }
         result.putExtra(EXTRA_QRVALUE, sb.toString());
         setResult(Activity.RESULT_OK, result);
         finish();
