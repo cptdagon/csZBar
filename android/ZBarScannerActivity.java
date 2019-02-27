@@ -422,8 +422,8 @@ implements SurfaceHolder.Callback {
                 SymbolSet syms = scanner.getResults();
                 for (Symbol sym : syms) {
                     qrValue = sym.getData();
-		            // Store Value in Array for multiple scans
-		            qrArray.Add(qrValue);
+		    // Store Value in Array for multiple scans
+		    qrArray.Add(qrValue);
                     // Return 1st found QR code value to the calling Activity.
                     //Intent result = new Intent ();
                     //result.putExtra(EXTRA_QRVALUE, qrValue);
