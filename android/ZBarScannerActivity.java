@@ -243,7 +243,7 @@ implements SurfaceHolder.Callback {
                 degrees = 270;
                 break;
             }
-            case default {
+            default: {
                 degrees = 0;
                 break;
             }
