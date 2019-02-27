@@ -1,10 +1,7 @@
-**This repository is looking for a maintainer! If you believe you are the right person, please [leave a comment](https://github.com/tjwoon/csZBar/issues/60)!**
-
-
 
 # ZBar Barcode Scanner Plugin
 
-:warning: This plugin is SUPPORTED by OutSystems. Customers entitled to Support Services may obtain assistance through Support.
+:warning: This plugin is NOT SUPPORTED by OutSystems. 
 
 This plugin integrates with the [ZBar](http://zbar.sourceforge.net/) library,
 exposing a JavaScript interface for scanning barcodes (QR, 2D, etc).
